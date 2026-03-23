@@ -6,8 +6,8 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background: #C5A37F;
-  color: black;
+  background: #000000;
+  color: #ffffff;
   min-height: 100vh;
 }
 
@@ -165,6 +165,26 @@ h1, h2 {
   max-width: 90vw;
   margin: 0 auto;
   overflow: hidden;
+  background: #ffffff;
+  border: 2px solid #ddd;
+  border-radius: 24px;
+  padding: 8px;
+}
+
+body,
+header,
+main,
+section,
+nav,
+.carousel,
+.carousel h2,
+.carousel h1,
+.carousel p,
+.contact p,
+section p,
+li a,
+nav a {
+  color: #000000;
 }
 
 .carousel-inner {
