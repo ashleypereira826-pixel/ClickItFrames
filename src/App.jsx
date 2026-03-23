@@ -87,7 +87,7 @@ const App = () => {
     <Router>
       <header>
         <nav>
-          <h1>ClickIt Frames</h1>
+          <h1>ClickIt.Frames</h1>
           <ul>
             <li><Link to="/">Home</Link></li>
             <li className="dropdown">

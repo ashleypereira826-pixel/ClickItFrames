@@ -1,5 +1,6 @@
 function initCarousels() {
   document.querySelectorAll('.carousel').forEach((carousel) => {
+    const inner = carousel.querySelector('.carousel-inner');
     const items = carousel.querySelectorAll('.carousel-item');
     const prevBtn = carousel.querySelector('.prev');
     const nextBtn = carousel.querySelector('.next');
@@ -7,19 +8,20 @@ function initCarousels() {
     let autoTimer;
 
     function show(index) {
+      currentIndex = index;
+      const offset = -index * 100;
+      inner.style.transform = `translateX(${offset}%)`;
       items.forEach((item, idx) => {
         item.classList.toggle('active', idx === index);
       });
     }
 
     function goNext() {
-      currentIndex = (currentIndex + 1) % items.length;
-      show(currentIndex);
+      show((currentIndex + 1) % items.length);
     }
 
     function goPrev() {
-      currentIndex = (currentIndex - 1 + items.length) % items.length;
-      show(currentIndex);
+      show((currentIndex - 1 + items.length) % items.length);
     }
 
     function startAuto() {
