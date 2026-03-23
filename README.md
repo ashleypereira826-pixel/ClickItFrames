@@ -35,11 +35,13 @@ A basic photography portfolio website built with Vite, HTML, CSS, and JavaScript
 
 ## Customization
 
-Each gallery section has its own carousel. Replace the images in the `images/` folder and placeholder URLs with your actual photos. Update the content in the About and Contact sections as needed. Each carousel runs independently with smooth slide animations from right to left and auto-advances every 4 seconds.
+Each gallery page has its own carousel. Replace the placeholder image URLs with your actual photos. Update the content in the About and Contact sections as needed. Each carousel runs independently with smooth fade animations and auto-advances every 2 seconds. Navigation uses React Router for seamless page transitions.
 
 ## Technologies Used
 
 - Vite
+- React
+- React Router DOM
 - HTML5
 - CSS3
 - JavaScript
