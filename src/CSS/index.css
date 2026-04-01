@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0f0f0f;
+  color: white;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.header h2 {
+    font-family: 'Callahan', cursive;
+    text-align: center;
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.header nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7), #0f0f0f),
+              url('https://picsum.photos/1600/900') center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+}
+
+.overlay {
+  text-align: center;
+  max-width: 600px;
+}
+
+.overlay h1 {
+  font-size: 36px;
+}
+
+.overlay p {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+/* BUTTONS */
+button {
+  padding: 12px 25px;
+  border: none;
+  background: #f7e733;
+  color: black;
+  cursor: pointer;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.secondary {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+#viewWorkBtn {
+  position: relative;
+  overflow: hidden;
+}
+
+#viewWorkBtn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.2);
+  transition: 0.4s;
+}
+
+#viewWorkBtn:hover ::after {
+  left: 100%;
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.brand {
+  background: #161616;
+}
+
+/* CATEGORIES */
+.categories {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.card {
+  position: relative;
+  height: 350px;
+  flex: 1;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
+
+.card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    z-index: 0;
+}
+
+.card h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+    color: white;
+    font-size: 22px;
+}
+
+/* OVERLAY */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.7),
+        transparent
+    );
+    z-index: 1;
+}
+
+.product {
+  background: url('../images/Fogg.jpg') center/cover;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* FEATURED */
+.featured {
+  background: #f5f5f5;
+  color: black;
+}
+
+.gallery {
+  column-count: 3;
+  column-gap: 10px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 6px;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s ease;
+}
+
+.gallery img.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CTA */
+.cta {
+  background: #f7e733;
+  color: black;
+}
+
+/* FOOTER */
+.footer {
+  background: #0a0a0a;
+  color: #ccc;
+  padding: 60px 20px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section a {
+  color: #f7e733;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #777;
+}
+
+#about {
+    scroll-margin-top: 100px;
+}
+
+/* ANIMATIONS */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .gallery {
+    column-count: 2;
+  }
+
+  .categories {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    column-count: 1;
+  }
+}
+
+/* WHATSAPP FLOATING BUTTON */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #25D366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  background: rgba(37, 211, 102, 0.9);
+  animation: floatUp 1s ease;
+}
+
+/* FLOATING ANIMATION */
+@keyframes floatUp {
+  from {
+    transform: translate(-50%, 50px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+/*HOVER EFFECT FOR WHATSAPP BUTTON */
+.whatsapp-float:hover {
+  transform: translateX(-50%)scale(1.1);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
