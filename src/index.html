@@ -6,25 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Photography Portfolio</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Callahan&display=swap" />
-    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <h1>ClickIt.Frames</h1>
-        <ul>
-          <li class="dropdown">
-            <a href="#gallery">Gallery</a>
-            <ul class="dropdown-menu">
-              <li><a href="portrait.html">Portrait</a></li>
-              <li><a href="product.html">Product</a></li>
-            </ul>
-          </li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div id="header-placeholder"></div>
     <div id="root"></div>
     <main>
       <section id="home">
@@ -58,7 +43,11 @@
         </p>
       </section>
     </main>
+
+    <script src="JS/header.js"></script>
+    
     <script src="/carousel.js"></script>
-    <script type="module" src="/src/main.jsx"></script>
+    
+    <script type="module" src="main.jsx"></script>
   </body>
 </html>
