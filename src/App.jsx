@@ -4,9 +4,9 @@ import './style.css';
 
 const portraitImages = [
   { src: 'images/sayali.jpg', alt: 'Portrait 1' },
-  { src: 'images/kid1.jpeg', alt: 'Portrait 2' },
-  { src: 'images/kid2.jpeg', alt: 'Portrait 3' },
-  { src: 'images/kid3.jpeg', alt: 'Portrait 4' },
+  { src: 'images/isha1.jpg', alt: 'Portrait 2' },
+  { src: 'images/aaron1.jpg', alt: 'Portrait 3' },
+  { src: 'images/sayali2.jpg', alt: 'Portrait 4' },
 ];
 const productImages = [
   { src: 'images/Fogg.jpg', alt: 'Product 1' },
