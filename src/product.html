@@ -1,89 +1,48 @@
-<!doctype html>
+<<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product | ClickIt.Frames</title>
-    <link rel="stylesheet" href="/src/style.css" />
-    <style>
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #d0a27f 0%, #2d2f4c 100%);
-        color: #fff;
-        min-height: 100vh;
-      }
-      header {
-        background: rgba(0, 0, 0, 0.7);
-        padding: 1rem;
-      }
-      nav {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      nav a {
-        color: #fff;
-        text-decoration: none;
-        margin-left: 1rem;
-      }
-      main {
-        max-width: 1200px;
-        margin: 2rem auto;
-        padding: 2rem;
-        background: rgba(255, 255, 255, 0.12);
-        border-radius: 12px;
-        backdrop-filter: blur(6px);
-      }
-      h1, h2 { text-align: center; }
-      .links {
-        text-align: center;
-        margin-top: 1rem;
-      }
-      .links a {
-        display: inline-block;
-        margin: 0.4rem 0.8rem;
-        padding: 0.5rem 1rem;
-        border: 1px solid #fff;
-        border-radius: 8px;
-      }
-    </style>
+    <title>Portrait Photography</title>
+    <link rel="stylesheet" href="CSS/portrait_styles.css" />
   </head>
+
   <body>
     <header>
       <nav>
-        <span><strong>ClickIt.Frames</strong></span>
-        <span>
-          <a href="index.html">Home</a>
-          <a href="portrait.html">Portraits</a>
-          <a href="product.html">Products</a>
-        </span>
+        <h1>ClickIt.Frames</h1>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
     </header>
-    <main>
-      <h1>Product Photography</h1>
-      <p>This page inherits the same gradient background and navigation as the main site.</p>
-      <section class="links">
-        <a href="portrait.html">Go to Portrait</a>
-        <a href="index.html">Back to Home</a>
+
+    <!-- HERO -->
+     <section class="hero">
+      <div class="hero-content">
+        <h1>Capturing the Essence of Portraits</h1>
+        <p>Discover the art of portrait photography and how to create stunning images that tell a story.</p>
+        <button id="exploreBtn">GET STARTED</button>
+      </div>
       </section>
-      <section>
-        <h2>Featured Products</h2>
-        <div class="carousel" data-auto="true">
-          <div class="carousel-inner">
-            <div class="carousel-item active"><img src="images/Fogg.jpg" alt="Product 1" /></div>
-            <div class="carousel-item"><img src="images/Product2.jpg" alt="Product 2" /></div>
-            <div class="carousel-item"><img src="images/Product3.jpg" alt="Product 3" /></div>
-            <div class="carousel-item"><img src="images/Product4.jpg" alt="Product 4" /></div>
-            <div class="carousel-item"><img src="images/Product5.jpg" alt="Product 5" /></div>
-          </div>
-          <button class="prev">&lt;</button>
-          <button class="next">&gt;</button>
+
+      
+
+      <!-- GRID GALLERY -->
+       <section class="gallery">
+        <div class="item"> <img src="images/Fogg.jpg" alt="Fogg" /></div>
+       </section>
+      
+      <!-- LIGHTBOX -->
+        <div class="lightbox" id="lightbox">
+          <span id="close">&times;</span>
+          <img id="lightboxImg" src="">
         </div>
-      </section>
-    </main>
-    <script src="/carousel.js"></script>
+
+      <script src="JS/portrait_script.js"></script>
+
   </body>
 </html>

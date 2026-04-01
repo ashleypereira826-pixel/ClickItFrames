@@ -1,13 +1,6 @@
 
 const images = [
-  "images/sayali.jpg",
-  "images/sayali2.jpg",
-  "images/sayali3.jpg",
-  "images/isha1.jpg",
-  "images/isha2.jpg",
-  "images/aaron1.jpg",
-  "images/aaron2.jpg",
-  "images/aaron3.jpg"
+  "images/Fogg.jpg",
 ];
 
 const gallery = document.getElementById("gallery");
