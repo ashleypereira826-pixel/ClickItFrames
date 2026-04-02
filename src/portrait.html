@@ -5,64 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portrait Photography</title>
     <link rel="stylesheet" href="CSS/portrait_styles.css" />
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   </head>
 
   <body>
-    <header>
+    <header class="header">
+      <h2>ClickIt Frames</h2>
       <nav>
-        <h1>ClickIt.Frames</h1>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="product.html">Product</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <a href="index.html">Home</a>
+        <a href="portrait.html">Portrait</a>
+        <a href="product.html">Product</a>
+        <a href="#about">Contact</a>
+        <a href="#about">About</a>
       </nav>
     </header>
 
     <!-- HERO -->
-     <section class="hero">
-      <div class="hero-content">
-        <h1>Capturing the Essence of Portraits</h1>
-        <p>Discover the art of portrait photography and how to create stunning images that tell a story.</p>
-        <button id="exploreBtn">GET STARTED</button>
-      </div>
-      </section>
+    <section class="hero">
+      <h1>Portrait Gallery</h1>
+      <p>Moments that speak without words.</p>
+    </section>
 
+    <!-- FILTERS -->
+    <section class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="male">Male</button>
+      <button class="filter-btn" data-filter="female">Female</button>
+      <button class="filter-btn" data-filter="abstract">Abstract</button>
+    </section>
       
 
-      <!-- GRID GALLERY -->
-       <section class="gallery">
-        <div class="item"> <img src="images/sayali.jpg" alt="Sayali" loading="lazy" /></div>
-        <div class="item"> <img src="images/sayali2.jpg" alt="Sayali" loading="lazy"/></div>
-        <div class="item"> <img src="images/sayali3.jpg" alt="Sayali" loading="lazy" /></div>
-        <div class="item"> <img src="images/isha1.jpg" alt="Isha" loading="lazy" /></div>
-        <div class="item"> <img src="images/isha2.jpg" alt="Isha" loading="lazy" /></div>
-        <div class="item"> <img src="images/isha3.jpg" alt="Isha" loading="lazy" /></div>
-        <div class="item"> <img src="images/aaron1.jpg" alt="Aaron" loading="lazy" /></div>
-        <div class="item"> <img src="images/aaron2.jpg" alt="Aaron" loading="lazy" /></div>
-        <div class="item"> <img src="images/aaron3.jpg" alt="Aaron" loading="lazy" /></div>
-        <div class="item"> <img src="images/rajesh.jpg" alt="Rajesh" loading="lazy" /></div>
-        <div class="item"> <img src="images/rajesh2.jpg" alt="Rajesh" loading="lazy" /></div>
-        <div class="item"> <img src="images/rajesh3.jpg" alt="Rajesh" loading="lazy" /></div> 
-        <div class="item"> <img src="images/eye.jpg" alt="Eye" loading="lazy" /></div>
-        <div class="item"> <img src="images/eye2.jpg" alt="Eye" loading="lazy" /></div>
-        <div class="item"> <img src="images/eye3.jpg" alt="Eye" loading="lazy" /></div>
-        <div class="item"> <img src="images/aadarsh.jpg" alt="Aadarsh" loading="lazy" /></div>
-        <div class="item"> <img src="images/aadarsh2.jpg" alt="Aadarsh" loading="lazy" /></div>
-        <div class="item"> <img src="images/aadarsh3.jpg" alt="Aadarsh" loading="lazy" /></div>
-        <div class="item"> <img src="images/girl.jpg" alt="Girl" loading="lazy" /></div>
-        <div class="item"> <img src="images/girl2.jpg" alt="Girl" loading="lazy" /></div>
-        <div class="item"> <img src="images/girl3.jpg" alt="Girl" loading="lazy" /></div>
-       </section>
+    <!-- GRID GALLERY -->
+      <section class="gallery">
+        <div class="grid">
+          <!-- Images -->
+          <div class="item female"> <img src="images/sayali.jpg" alt="Sayali" loading="lazy"></div>
+          <div class="item female"> <img src="images/sayali2.jpg" alt="Sayali" loading="lazy"></div>
+          <div class="item female"> <img src="images/sayali3.jpg" alt="Sayali" loading="lazy"></div>
+          <div class="item female"> <img src="images/isha1.jpg" alt="Isha" loading="lazy"></div>
+          <div class="item female"> <img src="images/isha2.jpg" alt="Isha" loading="lazy"></div>
+          <div class="item female"> <img src="images/isha3.jpg" alt="Isha" loading="lazy"></div>
+          <div class="item male"> <img src="images/aaron1.jpg" alt="Aaron" loading="lazy"></div>
+          <div class="item male"> <img src="images/aaron2.jpg" alt="Aaron" loading="lazy"></div>
+          <div class="item male"> <img src="images/aaron3.jpg" alt="Aaron" loading="lazy"></div>
+          <div class="item male"> <img src="images/rajesh.jpg" alt="Rajesh" loading="lazy"></div>
+          <div class="item male"> <img src="images/rajesh2.jpg" alt="Rajesh" loading="lazy"></div>
+          <div class="item male"> <img src="images/rajesh3.jpg" alt="Rajesh" loading="lazy"></div> 
+          <div class="item abstract"> <img src="images/eye.jpg" alt="Eye" loading="lazy"></div>
+          <div class="item abstract"> <img src="images/eye2.jpg" alt="Eye" loading="lazy"></div>
+          <div class="item abstract"> <img src="images/eye3.jpg" alt="Eye" loading="lazy"></div>
+          <div class="item male"> <img src="images/aadarsh.jpg" alt="Aadarsh" loading="lazy"></div>
+          <div class="item male"> <img src="images/aadarsh2.jpg" alt="Aadarsh" loading="lazy"></div>
+          <div class="item male"> <img src="images/aadarsh3.jpg" alt="Aadarsh" loading="lazy"></div>
+          <div class="item female"> <img src="images/girl.jpg" alt="Girl" loading="lazy"></div>
+          <div class="item female"> <img src="images/girl2.jpg" alt="Girl" loading="lazy"></div>
+          <div class="item female"> <img src="images/girl3.jpg" alt="Girl" loading="lazy"></div>
+        </div>
+      </section>
       
       <!-- LIGHTBOX -->
         <div class="lightbox" id="lightbox">
           <span id="close">&times;</span>
-          <img id="lightboxImg" src="">
+          <img id="lightbox-img">
+        </div>
+      
+      <!-- FOOTER -->
+      <footer id="about" class="footer">
+        <div class="footer-container">
+        <!-- ABOUT -->
+          <div class="footer-section">
+            <h3>About</h3>
+            <p>
+              Portrait photography that captures real emotion and presence.
+            </p>
+          </div>
+
+          <!-- CONTACT -->
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: ashleypereira826@gmail.com</p>
+            <p>Phone: +91 97303 90065</p>
+            <p>Location: Mumbai, India</p>
+          </div>
+
+          <!-- SOCIAL -->
+          <div class="footer-section">
+            <h3>Follow</h3>
+            <p><a href="https://www.instagram.com/clickit.frames/", target="_blank">
+              <i class="fab fa-instagram"></i>Clickit.Frames</a></p>
+            <p><a href="https://www.instagram.com/clickit.frames.products/", target="_blank">
+              <i class="fab fa-instagram"></i>Clickit.Frames.Products</a></p>
+          </div>
+
         </div>
 
-      <script src="JS/portrait_script.js"></script>
+        <div class="footer-bottom">
+          <p>© 2026 ClickIt Frames. All rights reserved.</p>
+        </div>
+
+      </footer>
+
+    <script src="JS/portrait_script.js"></script>
 
 
   </body>

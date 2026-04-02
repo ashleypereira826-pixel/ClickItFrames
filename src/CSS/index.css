@@ -139,6 +139,7 @@ section {
   overflow: hidden;
   transition: transform 0.4s ease;
   will-change: transform;
+  transform: translateZ(0);
 }
 
 .card img {
@@ -330,3 +331,16 @@ section {
   box-shadow: 0 12px 25px rgba(0,0,0,0.4);
 }
 
+/* ICON */
+.footer-section i {
+  margin-right: 8px;
+  font-size: 16px;
+  /* Instagram gradient */
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  transition: transform 0.3s ease;
+}

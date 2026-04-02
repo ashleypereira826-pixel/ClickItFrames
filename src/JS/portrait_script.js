@@ -1,45 +1,46 @@
 
-const images = [
-  "images/sayali.jpg",
-  "images/sayali2.jpg",
-  "images/sayali3.jpg",
-  "images/isha1.jpg",
-  "images/isha2.jpg",
-  "images/aaron1.jpg",
-  "images/aaron2.jpg",
-  "images/aaron3.jpg"
-];
+document.addEventListener("DOMContentLoaded", () => {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const items = document.querySelectorAll(".item");
 
-const gallery = document.getElementById("gallery");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightboxImg");
-const closeBtn = document.getElementById("close");
+  const lightbox = document.querySelector(".lightbox");
+  const lightboxImg = document.querySelector(".lightbox-img");
+  const closeBtn = document.querySelector(".close");
 
-// Load images dynamically
-images.forEach(src => {
-  const div = document.createElement("div");
-  div.classList.add("item");
-
-  const img = document.createElement("img");
-  img.src = src;
-  img.loading = "lazy";
-
-  // Click → open lightbox
-  img.addEventListener("click", () => {
-    lightbox.style.display = "flex";
-    lightboxImg.src = src;
+  // LightBox
+  items.forEach(item => {
+    const img = item.querySelector("img");
+    img.addEventListener("click", () => {
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
+    });
   });
 
-  div.appendChild(img);
-  gallery.appendChild(div);
-});
+  // CLOSE BUTTON
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      lightbox.style.display = "none";
+    });
+  }
 
-// Close lightbox
-closeBtn.addEventListener("click", () => {
-  lightbox.style.display = "none";
-});
+  // Filter Logic
 
-// Smooth scroll
-document.getElementById("exploreBtn").addEventListener("click", () => {
-  gallery.scrollIntoView({ behavior: "smooth" });
+  filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      //Remove active from all
+
+      filterButtons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const filter = btn.getAttribute("data-filter");
+
+      items.forEach(item => {
+        if (filter === "all" || item.classList.contains(filter)) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+  });
 });

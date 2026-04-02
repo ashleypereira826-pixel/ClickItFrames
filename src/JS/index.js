@@ -5,6 +5,8 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.classList.add("show");
     }
   });
+}, {
+  threshold: 0.2
 });
 
 document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
@@ -21,9 +23,16 @@ images.forEach((img, index) => {
 
 
 // HERO PARALLAX
+let ticking = false;
 window.addEventListener("scroll", () => {
-  const hero = document.querySelector(".hero");
-  hero.style.backgroundPositionY = window.scrollY * 0.5 + "px";
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      const hero = document.querySelector(".hero");
+      hero.style.backgroundPositionY = window.scrollY * 0.3 + "px";
+      ticking = false;
+    });
+    ticking = true;
+  }
 });
 
 // SCROLL LOGIC
@@ -76,5 +85,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function goToInstagram() {
-  window.open("https://www.instagram.com/clickit.frames?igsh=MWw5b3E3em9kNnR3aw==", "_blank");
+  window.open("https://www.instagram.com/clickit.frames/", "_blank");
 }
